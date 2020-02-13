@@ -5,14 +5,8 @@ class Server{
 	static public function get_var($name){
 		
 		// @TODO Переделать в однострочное условие
-		if( function_exists( 'filter_input' ) )
-			$value = filter_input( INPUT_SERVER, $name );
+		? ( function_exists( 'filter_input' ) ) $value = filter_input( INPUT_SERVER, $name ) : {$value = $_GET [ $name ]; return $value;}
 		
-		else
-			$value = $_GET [ $name ];
-		
-		
-		return $value;
 	}
 
 	static public function has( $name, $stringi ){
