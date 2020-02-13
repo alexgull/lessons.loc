@@ -1,7 +1,27 @@
 <?php 
 define ( 'ROOT_DIR', __DIR__ );
 require_once( 'inc/user_functions.php' );
-require_once( 'handlers/handler_register.php' ); ?>
+require_once( 'handlers/handler_register.php' ); 
+
+require_once ('lib/autoloader.php');
+
+//require_once ('lib/Get.php');
+//require_once ('lib/Post.php');
+//require_once ('lib/Server.php');
+
+
+
+var_dump ( Get::get_var('some') );
+var_dump ( Get::has('some','serge') );
+
+var_dump ( Server::get_var('some') );
+var_dump ( Post::get_var('some') );
+
+//var_dump ( $_SERVER );
+
+die();
+
+?>
 
 <!DOCTYPE html>
 <html>
